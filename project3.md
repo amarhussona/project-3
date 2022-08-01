@@ -65,3 +65,31 @@ Add new inbound rule:
 
 ![config api](./images/config-api.png)
 
+## MODELS
+
+Change directory into Todo folder.
+
+`npm install mongoose`
+
+![install mongoose](./images/install-mongoose.png)
+
+`mkdir models`
+
+`cd models`
+
+`touch todo.js`
+
+![models dir](./images/models-dir.png)
+
+`nano todo.js`
+
+![configure todo.js](./images/config-todo-js.png)
+
+Update api.js in routes folder to use new model:
+
+`nano api.js`
+
+![update api.js](./images/update-api.png)
+
+
+
