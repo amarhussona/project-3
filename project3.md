@@ -167,3 +167,115 @@ DELETE request:
 
 <!-- I passed the id into the url to get the DELETE request. Please let me know if this is the correct/optimal way to do so. -->
 
+## FRONTEND CREATION
+
+Create react app in Todo dir:
+
+`npx create-react-app client`
+
+![react app](./images/create-react-app.png)
+
+`npm install concurrently --save-dev`
+
+![install concurrently](./images/install-concurrently.png)
+
+`npm install nodemon --save-dev`
+
+![install nodemon](./images/install-nodemon.png)
+
+Update package.json file with code below in Todo dir:
+
+<!-- "scripts": {
+"start": "node index.js",
+"start-watch": "nodemon index.js",
+"dev": "concurrently \"npm run start-watch\" \"cd client && npm start\""
+}, -->
+
+Configure proxy:
+
+Go to client dir and update package.json:
+
+![proxy](./images/adding-proxy.png)
+
+Also add inbound rule:
+
+![inbound rule 3000](./images/port-3000.png)
+
+`npm run dev`
+
+It worked however I did get an error while running the app:
+
+![error](./images/locolhost3000.png)
+
+Create components:
+
+`cd client`
+
+`cd`
+
+`mkdir components`
+
+`cd components`
+
+![components](./images/components.png)
+
+`touch Input.js ListTodo.js Todo.js`
+
+`nano Input.js`
+
+Copy and paste the following:
+
+<!-- import React, { Component } from 'react';
+import axios from 'axios';
+
+class Input extends Component {
+
+state = {
+action: ""
+}
+
+addTodo = () => {
+const task = {action: this.state.action}
+
+    if(task.action && task.action.length > 0){
+      axios.post('/api/todos', task)
+        .then(res => {
+          if(res.data){
+            this.props.getTodos();
+            this.setState({action: ""})
+          }
+        })
+        .catch(err => console.log(err))
+    }else {
+      console.log('input field required')
+    }
+
+}
+
+handleChange = (e) => {
+this.setState({
+action: e.target.value
+})
+}
+
+render() {
+let { action } = this.state;
+return (
+<div>
+<input type="text" onChange={this.handleChange} value={action} />
+<button onClick={this.addTodo}>add todo</button>
+</div>
+)
+}
+}
+
+export default Input -->
+
+Install Axios:
+
+`npm install axios`
+
+![install axios](./images/install-axios.png)
+
+
+
