@@ -104,8 +104,8 @@ Add the connection string to access the database in it, just as below:
 ![Add to .env](./images/connect-clusterMERN.png)
 
 Update index.js with this code:
-
-<!-- const express = require('express');
+```
+const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const routes = require('./routes/api');
@@ -141,8 +141,8 @@ next();
 
 app.listen(port, () => {
 console.log(`Server running on port ${port}`)
-});` -->
-
+});`
+```
 `node index.js` to start server
 
 Got this error:
@@ -184,13 +184,13 @@ Create react app in Todo dir:
 ![install nodemon](./images/install-nodemon.png)
 
 Update package.json file with code below in Todo dir:
-
-<!-- "scripts": {
+```
+"scripts": {
 "start": "node index.js",
 "start-watch": "nodemon index.js",
 "dev": "concurrently \"npm run start-watch\" \"cd client && npm start\""
-}, -->
-
+},
+```
 Configure proxy:
 
 Go to client dir and update package.json:
@@ -224,8 +224,8 @@ Create components:
 `nano Input.js`
 
 Copy and paste the following:
-
-<!-- import React, { Component } from 'react';
+```
+import React, { Component } from 'react';
 import axios from 'axios';
 
 class Input extends Component {
@@ -269,8 +269,8 @@ return (
 }
 }
 
-export default Input -->
-
+export default Input
+```
 Install Axios:
 
 `npm install axios`
@@ -282,8 +282,8 @@ Create components dir:
 `cd src/components`
 
 `vi ListTodo.js`
-
-<!-- import React from 'react';
+```
+import React from 'react';
 
 const ListTodo = ({ todos, deleteTodo }) => {
 
@@ -308,13 +308,13 @@ return (
 )
 }
 
-export default ListTodo -->
-
+export default ListTodo
+```
 `vi Todo.js`
 
 input this code:
-
-<!-- import React, {Component} from 'react';
+```
+import React, {Component} from 'react';
 import axios from 'axios';
 
 import Input from './Input';
@@ -368,15 +368,15 @@ let { todos } = this.state;
 }
 }
 
-export default Todo; -->
-
+export default Todo;
+```
 Go to src folder:
 
 `vi App.js`
 
 input this code:
-
-<!-- import React from 'react';
+```
+import React from 'react';
 
 import Todo from './components/Todo';
 import './App.css';
@@ -389,11 +389,11 @@ return (
 );
 }
 
-export default App; -->
-
+export default App;
+```
 `vi App.css`
-
-<!-- .App {
+```
+.App {
 text-align: center;
 font-size: calc(10px + 2vmin);
 width: 60%;
@@ -479,11 +479,11 @@ width: 30%;
 margin-left: 10px;
 margin-top: 0;
 }
-} -->
-
+}
+```
 `vi index.css`
-
-<!-- body {
+```
+body {
 margin: 0;
 padding: 0;
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -499,8 +499,8 @@ color: #787a80;
 code {
 font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 monospace;
-} -->
-
+}
+```
 Go into Todo dir:
 
 `npm run dev`
